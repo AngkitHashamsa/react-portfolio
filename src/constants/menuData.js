@@ -12,7 +12,7 @@ const sideBarData = [
     value: 'Testimonials',
   },
   {
-    anchor: '"#contact',
+    anchor: '#contact',
     value: 'Contact',
   },
 ];
