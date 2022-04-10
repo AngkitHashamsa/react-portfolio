@@ -1,7 +1,12 @@
 import React from 'react';
+import './works.scss';
 
 const Works = () => {
-  return <div>Works</div>;
+  return (
+    <div className="works" id="works">
+      Works
+    </div>
+  );
 };
 
 export default Works;

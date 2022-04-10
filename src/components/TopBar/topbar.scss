@@ -1,3 +1,54 @@
-.color {
-    background-color: red;
+@import "~styles/variables.scss";
+
+.tobBar {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    color: $main-color;
+    z-index: 2;
+
+    .wrapper {
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            .navLogo {
+                font-size: 40px;
+                font-weight: $text-bold;
+                text-decoration: none;
+                margin-right: 40px;
+            }
+
+            .contactContainer {
+                display: flex;
+                align-items: center;
+                margin-left: 28px;
+                .icon {
+                    font-size: 18px;
+                    margin-right: 5px;
+                }
+                span {
+                    font-size: 16px;
+                    font-weight: $text-semiBold;
+                }
+            }
+        }
+        .right {
+            .menuIcon {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &.active {
+        background-color: $main-color;
+        color: white;
+    }
 }
