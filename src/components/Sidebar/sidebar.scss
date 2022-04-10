@@ -1,0 +1,60 @@
+@import "~styles/variables";
+
+.sidebarContainer {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+    background-color: $main-color;
+    transform: translate(100%);
+    transition: all 0.3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+        transform: translate(0);
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 28px;
+        font-weight: $text-light;
+        color: white;
+        width: 60%;
+        transition: all 0.3s linear;
+
+        li {
+            margin-bottom: 24px;
+            transition: inherit;
+
+            &:hover {
+                font-weight: $text-bold;
+            }
+
+            a {
+                color: inherit;
+                font-size: inherit;
+            }
+        }
+    }
+
+    .iconButton {
+        color: white;
+        position: fixed;
+        top: 12px;
+        right: 5px;
+
+        svg {
+            transition: all 0.3s linear;
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}

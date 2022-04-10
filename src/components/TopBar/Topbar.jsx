@@ -5,9 +5,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from '@mui/material';
 import './topbar.scss';
 
-const Topbar = () => {
+const Topbar = ({ menuOpen, setMenuOpen }) => {
+  console.log('topbar');
   return (
-    <nav className="tobBar active" id="nav">
+    <nav className={`tobBar ${menuOpen && 'active'} `} id="nav">
       <div className="wrapper">
         <section className="left">
           <a href="#intro" className="navLogo">
@@ -23,8 +24,13 @@ const Topbar = () => {
           </div>
         </section>
         <section className="right">
-          <IconButton sx={{ color: '#150234' }} aria-label="upload picture" component="span">
-            <MenuIcon />
+          <IconButton
+            className={`iconButton ${menuOpen && 'active'} `}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="upload picture"
+            component="span"
+          >
+            <MenuIcon sx={{ fontSize: 32 }} />
           </IconButton>
         </section>
       </div>

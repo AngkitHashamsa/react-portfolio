@@ -41,8 +41,16 @@
             }
         }
         .right {
-            .menuIcon {
-                font-size: 32px;
+            .iconButton {
+                color: $main-color;
+                svg {
+                    &:hover {
+                        color: $menu-icon;
+                    }
+                }
+                &.active {
+                    color: white;
+                }
             }
         }
     }

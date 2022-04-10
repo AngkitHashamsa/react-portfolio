@@ -1,1 +1,4 @@
-export { default } from './Contact';
+import { memo } from 'react';
+import Contact from './Contact';
+
+export default memo(Contact);
